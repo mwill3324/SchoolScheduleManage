@@ -13,6 +13,7 @@ class WeekView: UIViewController, UITableViewDataSource , UITableViewDelegate  {
     @IBOutlet weak var WeekTable: UITableView!
     @IBOutlet weak var dateLabel: UILabel!
     
+    var daysWeek = ["S","M","T","W","Th","F","S"]
     ////////////////////
     var todaysTasks:[String] = []
     var todaysTcomps:[[String]] = [[]]
@@ -47,6 +48,7 @@ class WeekView: UIViewController, UITableViewDataSource , UITableViewDelegate  {
             print("CLASS TABLE")
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! weekViewTableCell
             cell.detailTextLabel?.textAlignment = .right
+            cell.DayOfWeek.text = daysWeek[indexPath.row]
             cell.Label1.text = WeekTasks[indexPath.row][1]
             cell.Label2.text = WeekTasks[indexPath.row][2]
             cell.Label3.text = WeekTasks[indexPath.row][3]

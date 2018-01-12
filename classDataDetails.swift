@@ -14,7 +14,7 @@ extension Classes {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Classes> {
         return NSFetchRequest<Classes>(entityName: "Places")
     }
-    
+
     @NSManaged public var Days: String?
     @NSManaged public var placeName: String?
     @NSManaged public var placeDescri: String?
